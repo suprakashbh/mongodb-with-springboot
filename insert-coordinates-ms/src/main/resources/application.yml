@@ -1,0 +1,13 @@
+server:
+  port: 0
+
+info:
+  component: Insert Coordinates Micro service - UP
+  
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
+client:
+  registryFetchIntervalSeconds: 5

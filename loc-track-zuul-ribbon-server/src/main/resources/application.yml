@@ -1,0 +1,27 @@
+server:
+  port: 8777
+  
+info:
+  component: Zuul Ribbon Edge Server
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+  ignoredServices: "*"
+  routes:
+    fetchcoordinatesms:
+      path: /fetch/**
+      stripPrefix: false
+    insertcoordinatesms:
+      path: /insert/**
+      stripPrefix: false
+ribbon:
+    readTimeout :5000
+    hystrixTimeout:4500
+    execTime:4000
