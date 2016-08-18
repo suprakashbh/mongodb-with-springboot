@@ -8,3 +8,7 @@ Recover Mongo DB  Data after an Unexpected Shutdown : execute this below command
 mongod --dbpath D:\mongodb\data --repair
 
 And connect Mongo Database : mongo from bin folder
+
+Execute below command to restore mono table from Dump :
+
+mongorestore --db Gen --drop dump/Gen
