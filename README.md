@@ -12,3 +12,10 @@ And connect Mongo Database : mongo from bin folder
 Execute below command to restore mono table from Dump :
 
 mongorestore --db Gen --drop dump/Gen
+
+## Commonly used commands
+mongo -> to connect mongodb , mongo command prompt 
+show dbs  -> Show all the databases
+use <database-name> -> use particular database
+show collections  -> show all the collection for a database
+db.<collection-name>.find() - > display all the data for a collection
